@@ -1,1 +1,40 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="bootstrap3.min.css"><link rel="stylesheet" type="text/css" href="index.css"><script type="text/javascript" src="jquery-1.10.2.min.js"></script><script type="text/javascript" src="bootstrap3.min.js"></script><script type="text/javascript" src="index.js"></script></head><body><div id="timer">????</div><a class="btn btn-info fbtn" id="min60" onclick="adjust(-60)">-60</a><a class="btn btn-info fbtn" id="min10" onclick="adjust(-10)">-10</a><a class="btn btn-primary" id="toggle" onclick="toggle()">RUN</a><a class="btn btn-warning" id="reset" onclick="reset()">RESET</a><a class="btn btn-default" id="hide" onclick="show()">&#xd60;</a><a class="btn btn-info fbtn" id="add10" onclick="adjust(10)">+10</a><a class="btn btn-info fbtn" id="add60" onclick="adjust(60)">+60</a><a class="btn btn-success fbtn" id="def10" onclick="adjust(0,10)">10 sec</a><a class="btn btn-success fbtn" id="def30" onclick="adjust(0,30)">30 sec</a><a class="btn btn-success fbtn" id="def60" onclick="adjust(0,60)">1 min</a><a class="btn btn-success fbtn" id="def180" onclick="adjust(0,180)">3 min</a><a class="btn btn-success fbtn" id="def300" onclick="adjust(0,300)">5 min</a><a class="btn btn-success fbtn" id="def600" onclick="adjust(0,600)">10 min</a><a class="btn btn-success fbtn" id="def900" onclick="adjust(0,900)">15 min</a><a class="btn btn-success fbtn" id="def1800" onclick="adjust(0,1800)">30 min</a></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>農曆除夕倒數計時</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="lantern lantern-left"></div>
+  <div class="lantern lantern-right"></div>
+  <div class="sparkles"></div>
+  <main class="countdown-card">
+    <p class="eyebrow">農曆新年 · 團圓夜</p>
+    <h1>除夕倒數計時</h1>
+    <p id="lunar-today" class="lunar-today">今日農曆</p>
+    <section class="time-grid" aria-live="polite">
+      <div class="time-block">
+        <span id="days" class="time-value">00</span>
+        <span class="time-label">天</span>
+      </div>
+      <div class="time-block">
+        <span id="hours" class="time-value">00</span>
+        <span class="time-label">時</span>
+      </div>
+      <div class="time-block">
+        <span id="minutes" class="time-value">00</span>
+        <span class="time-label">分</span>
+      </div>
+      <div class="time-block">
+        <span id="seconds" class="time-value">00</span>
+        <span class="time-label">秒</span>
+      </div>
+    </section>
+    <p id="target-info" class="target-info"></p>
+    <p class="note">倒數至除夕夜 23:59 前的最後一刻，一起迎接春節！</p>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
